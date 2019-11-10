@@ -1,0 +1,19 @@
+<div>
+  <h1>Experience</h1>
+  <div *ngFor="let experience of this.expList">
+    <h2>{{ experience.company }}</h2>
+    <div *ngFor="let pos of experience.positions">
+      <div>
+        <h3>
+          {{ pos.title }}&nbsp;
+          <i> {{ pos.start }} - {{ pos.end }} </i>
+        </h3>
+        <ul>
+          <li *ngFor="let highlight of pos.highlights" class="listItem">
+            {{ highlight }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

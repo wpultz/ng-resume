@@ -1,0 +1,9 @@
+<div>
+  <h1>Skills</h1>
+  <div *ngFor="let skill of this.skillList" class="card">
+    <h2>{{ skill.title }}</h2>
+    <div class="skillMeterBack">
+      <div class="skillMeterFore" [ngStyle]="{ width: skill.level * 10 + '%' }"></div>
+    </div>
+  </div>
+</div>
