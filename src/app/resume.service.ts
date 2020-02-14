@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core'
+import { Observable, of } from 'rxjs'
 
 export interface ISkill {
   title: string
@@ -37,8 +38,8 @@ export interface IResume {
 export class ResumeService {
   constructor() {}
 
-  getResume(): IResume {
-    return {
+  getResume(): Observable<IResume> {
+    return of({
       skills: [
         {
           title: 'React',
@@ -176,6 +177,6 @@ export class ResumeService {
           gpa: '3.78'
         }
       ]
-    }
+    })
   }
 }

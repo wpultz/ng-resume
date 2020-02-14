@@ -13,7 +13,7 @@ export class ResumeComponent implements OnInit {
   constructor(private resumeService: ResumeService) {}
 
   getResume(): void {
-    this.resume = this.resumeService.getResume()
+    this.resumeService.getResume().subscribe(resume => (this.resume = resume))
   }
 
   ngOnInit() {
